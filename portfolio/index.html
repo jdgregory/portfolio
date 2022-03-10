@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Jennifer Gregory">
+        <meta name="description" content="Portfolio for web development student with experience in web design, web design, and graphic design">
+        <title>Jennifer Gregory | Web Design & Development</title>
+        <!-- Links -->
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500&family=Belleza&family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/navigation.css">
+        <!-- Scripts -->
+        <script src="js/nav.js" defer></script> <!-- ? defer is a boolean attribute that tells the browser to load the script after the html page has been parsed -->
+    </head>
+
+    <body>
+        <header> <!-- * HEADER -->
+            <div class="nav-wrapper-container"> <!-- ^ nav-wrapper -->
+                <div><!-- * div container for nav-logo -->
+                    <a href="index.html" target="_blank">
+                        <img id="nav-logo" src="images/mini-logo-nv4.svg" alt="site logo" height="60">
+                    </a>
+                </div>
+
+                <!--  * Button that toggles mobile menu -->
+                <!-- ? aria-controls="primary-navigation" lets screen reader know that button controls ul with class of "primary-navigation" -->
+                <!-- ? aria-expanded="false" - by default, when page loads, mobile menu will not be expanded, so value is false.  (when user toggles mobile menu, value will change to "true")-->
+                <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                    <!-- Reads "Menu" for screen-readers to provide context for close icon -->
+                    <span class="sr-only">Menu</span>
+                </button>
+
+                <nav> <!-- * Primary Navigation -->
+                    <ul id="primary-navigation" data-visible="false" class="primary-navigation no-bullet">
+                        <li class="active">
+                            <a class="primary-navigation-a" href="#about-link">About</a>
+                        </li>
+                        <li>
+                            <a class="primary-navigation-a" href="#projects-link">Projects</a>
+                        </li>
+                        <li>
+                            <a class="primary-navigation-a" href="#contact-link">Contact</a>
+                        </li>
+                        <li>
+                            <a class="primary-navigation-a" href="#resume-link">Resume</a>
+                        </li>
+                        <li>
+                            <a class="primary-navigation-a" href="https://jenninnc.wordpress.com/blog-feed/" target="_blank">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div><!-- end "nav-wrapper-container" class --> <!-- ^ END nav-wrapper --> 
+        </header>
+
+        <main><!-- * MAIN -->
+            <div class="main-wrapper-container"> <!-- ^ main-wrapper -->
+                
+                <section id="about"><!-- * About Section -->
+                    <a id="about-link"></a>
+                    <div class="about-left-column">
+                        <h1 id="about-h1">About</h1>
+                        <p id="about-p">Hi, my name is Jennifer Gregory! I'm a web development student at Wake Technical Community College. I have experience in web development, web design, and graphic and print design. I enjoy web design and development because there's always something new to learn!</p>
+                        <ul class="no-bullet about-icons">
+                            <li>
+                                <a class="contact-link" href="mailto:jdgregory@my.waketech.edu" target="_blank">
+                                    <img class="about-contact-icons" src="images/envelope.png" alt="email icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="contact-link" href="https://twitter.com/jennife41447182" target="_blank">
+                                    <img class="about-contact-icons" src="images/linkedin.svg" alt="linkedin logo">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="contact-link" href="https://twitter.com/jennife41447182" target="_blank">
+                                    <img class="about-contact-icons" src="images/twitter.svg" alt="twitter logo">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="contact-link" href="https://github.com/jdgregory" target="_blank">
+                                    <img class="about-contact-icons" src="images/github.svg" alt="github logo">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="about-right-column">
+                        <img src="images/AvatarMaker.svg" width="400" height="400" alt="avatar of women">
+                    </div>
+                </section> <!-- END About Section -->
+
+                <section class="section-spacing" id="projects"><!-- * Projects Section -->
+                    <a id="projects-link"></a>
+                    <h2>Featured Projects</h2>
+                    <div class="project-main-grid-container"> <!-- project-main-grid-container-->
+                        <!-- Project Item 1 -->
+                        <div id="proj-item-1" class="project-card-grid">
+                            <div class="project-image">
+                                <img src="images/high-country-beverages.png" width="300" height="300" alt="high country beverages brewery logo">
+                            </div>
+                            <div class="project-text-container">
+                                <h3 class="project-text-heading">Brewery Logo</h3>
+                                <p class="project-text">Created with Adobe Illustrator, this logo is for a brewery located in Blowing Rock, NC. This design is for an apple-infused beverage that the brewery serves in environmentally-friendly recycled glass bottles.</p>
+                            </div>
+                        </div>
+
+                        <!-- Project Item 2 -->
+                        <div id="proj-item-2" class="project-card-grid">
+                            <div class="project-image">
+                                <img src="images/EuroHello-logo.png" width="300" height="300" alt="graphic of airplane flying upward beside of logo for EuroHello Travel Agency">
+                            </div>
+                            <div class="project-text-container">
+                                <h3 class="project-text-heading">Travel Agency Logo</h3>
+                                <p class="project-text">This logo was created for EuroHello, a travel agency that specializes in planning European vacations. It was created using Adobe Illustrator.</p>
+                            </div>
+                        </div>
+
+                        <!-- Project Item 3 -->
+                        <div id="proj-item-3" class="project-card-grid">
+                            <div class="project-image">
+                                <img src="images/stokes.png" width="300" height="300" alt="stokes county website creating with material design bootstrap">
+                            </div>
+                            <div class="project-text-container">
+                                <h3 class="project-text-heading">Stokes County Website</h3>
+                                <p class="project-text">This project is a redesign of Stokes County's website. It was created using Material Design for Bootstrap, a version of Bootstrap that is styled like Material Design.</p>
+                                <div class="view-link-container">
+                                    <img class="project-open-icon" src="images/open-blue.png" width="25" height="25" alt="icon that indicates pop-up">
+                                    <a class="open-link" href="https://wcet3.waketech.edu/jgregory/WEB287/Stokes/index.html" target="_blank">View full website</a> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Item 4 -->
+                        <div id="proj-item-4" class="project-card-grid">
+                            <div class="project-image">
+                                <img src="images/biltmore.png" width="300" height="300" alt="app created to help visitors tour the Biltmore House">
+                            </div>
+                            <div class="project-text-container">
+                                <h3 class="project-text-heading">Biltmore Companion Website</h3>
+                                <p class="project-text">This companion website to Biltmore Estate's official website can be used by visitors to find out more information about their surroundings. It was created using a version of Bootstrap that is styled like Material Design.</p>
+                                <div class="view-link-container">
+                                    <img class="project-open-icon" src="images/open-blue.png" width="25" height="25" alt="icon that indicates pop-up">
+                                    <a class="open-link" href="https://wcet3.waketech.edu/jgregory/WEB287/Biltmore/index.html" target="_blank">View full website</a> 
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- end project-main-grid-container-->
+                </section><!-- END Projects Section -->
+
+                <section class="section-spacing" id="contact"> <!-- * Contact Section -->
+                    <a id="contact-link"></a>
+                    <h2>Contact Me</h2>
+                    <div class="contact-flex-container"> <!-- contact flexbox container -->
+                        <div class="contact-left-column">
+                            <ul class="no-bullet">
+                                <li>
+                                    <a class="contact-link" href="mailto:jdgregory@my.waketech.edu" target="_blank">
+                                        <img class="contact-icons" src="images/envelope.png" alt="email icon">
+                                        jdgregory@my.waketech.edu
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="contact-link" href="https://twitter.com/jennife41447182" target="_blank">
+                                        <img class="contact-icons" src="images/linkedin.svg" alt="linkedin logo">
+                                        Jennifer Gregory
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="contact-link" href="https://twitter.com/jennife41447182" target="_blank">
+                                        <img class="contact-icons" src="images/twitter.svg" alt="twitter logo">
+                                        jennife41447182
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="contact-link" href="https://github.com/jdgregory" target="_blank">
+                                        <img class="contact-icons" src="images/github.svg" alt="github logo">
+                                        jdgregory
+                                    </a>
+                                </li>
+                            </ul>
+                        
+                        </div>
+                        <div class="contact-right-column">
+                            <h3 class="contact-rheading">Send Me a Message!</h3>
+                            <form>
+                                <ul class="form-list-container no-bullet">
+                                    <li class="form-list-items">
+                                        <label class="contact-label" for="f-name">First Name</label>
+                                        <input class="contact-input" type="text" name="f-name" id="f-name">
+                                    </li>
+                                    <li class="form-list-items">
+                                        <label class="contact-label" for="l-name">Last Name</label>
+                                        <input class="contact-input" type="text" name="l-name" id="l-name">
+                                    </li>
+                                    <li class="form-list-items">
+                                        <label class="contact-label" for="email">Email</label>
+                                        <input class="contact-input" type="text" name="email" id="email">
+                                    </li>
+                                    <li class="form-list-items">
+                                        <label class="contact-label" for="phone">Phone</label>
+                                        <input class="contact-input" type="text" name="phone" id="phone">
+                                    </li>
+                                    <li>
+                                        <label class="block" for="message">Type your message here</label>
+                                        <textarea rows="5" cols="50" name="message" id="message"></textarea>
+                                    </li>
+                                    <li>
+                                        <button class="contact-button" type="submit" value="Submit">Submit</button>
+                                    </li>
+                                </ul>
+                            </form>
+                        
+                        </div>   
+                    </div>
+
+                </section><!-- END Contact Section -->
+
+                <section class="section-spacing" id="resume"><!-- * Resume Section -->
+                    <a id="resume-link"></a>
+                    <h2>Resume</h2>
+                    <h3 id="work-experience-h3">Work Experience</h3>
+
+                    <div class="job1"> <!-- job1 -->
+                        <ul class="job1-title">
+                            <li class="no-bullet bold resume-li">Tutor</li>
+                            <li class="no-bullet italic resume-li">Self-Employed</li>
+                            <li class="no-bullet resume-li">June 2014 - Present</li>
+                        </ul>
+                        <ul class="job1-description">
+                            <li class="no-bullet resume-li">Provides reading and writing tutoring to elementary and middle school-aged students</li>
+                            <li class="no-bullet resume-li">Key Responsibilities:</li>
+                            <li class="resume-li indent">Utilizes Orton-Gillingham Evidence-Based Reading Instruction.</li>
+                            <li class="resume-li indent" >Completes initial assessments of students' reading and writing abilities.</li>
+                            <li class="resume-li indent">Uses initial assessments to develop lesson plans to improve reading and writing skills.</li>
+                            <li class="resume-li indent">Conducts weekly tests to measure skill Creates lesson plans that utilize movement,<br> music, art, and technology.
+                            <li class="resume-li indent">Teaches basic writing skills, such as capitalization, spelling, grammar, and handwriting.</li>
+                            <li class="resume-li indent">Teaches basic reading skills, such as phonemic awareness, reading fluency and accuracy,<br> vocabulary development, and comprehension skills.</li>
+                        </ul>
+                    </div> <!-- END job1 -->
+
+                    <div class="job1"> <!-- job2 -->
+                        <ul class="job2-title">
+                            <li class="no-bullet bold resume-li">Nanny</li>
+                            <li class="no-bullet italic resume-li">Private Family</li>
+                            <li class="no-bullet resume-li">August 2011 - May 2014</li>
+                        </ul>
+                        <ul class="job2-description">
+                            <li class="no-bullet resume-li">Provided daily care for two children, ages 2 and 4. At the end of my employment,<br> the children were 4 and 7.</li>
+                            <li class="no-bullet resume-li">Key Responsibilities:</li>
+                            <li class="resume-li indent">Prepared meals and performed light housekeeping.</li>
+                            <li class="resume-li indent">Transported children to school, sports, and other activities.</li>
+                            <li class="resume-li indent">Created age-appropriate lessons and activities that encouraged emotional and academic growth. </li>
+                            <li class="resume-li indent">Completed errands, such as shopping for groceries and picking up dry cleaning.</li>
+                        </ul>
+                    </div><!-- END job2 -->                       
+
+                        <div class="skills-education-container"> <!--Skills & Education Container -->
+                            <div id="skills"> <!--Skills Section -->
+                                <h3>Skills</h3>
+                                <ul>
+                                    <li class="no-bullet">HTML</li>
+                                    <li class="no-bullet">CSS</li>
+                                    <li class="no-bullet">JavaScript</li>
+                                    <li class="no-bullet">WordPress</li>
+                                    <li class="no-bullet">PHP</li>
+                                    <li class="no-bullet">Bootstrap</li>
+                                </ul><!-- END skills Section -->
+                            </div> <!-- END Skills Section -->
+
+                            <div id="education"><!-- Education section -->
+                                <h3>Education</h3>
+                                <ul>
+                                    <li class="no-bullet">Wake Technical Community College - Raleigh, NC</li>
+                                    <li class="no-bullet">Web Developer AAS Degree, 2019 - present</li>
+                                </ul>
+                                <ul>
+                                    <li class="no-bullet">University of North Carolina at Greensboro - Greensboro, NC</li>
+                                    <li class="no-bullet">Bachelor of Science with Honors</li>
+                                    <li class="no-bullet">Elementary Education and Special Education Dual Major</li>
+                                </ul>
+                            </div><!-- END Education section -->
+                        </div> <!-- END Skills & Education Container -->
+                </section><!-- END Resume Section -->
+                <section class="section-spacing" id="blog"> <!-- * Blog Section -->
+                    <a id="blog-link"></a>
+                    <h2>Latest Blog Posts</h2>
+                    <div class="blog-card-container"> <!-- blog cards CSS grid container -->
+                        <div id="blog-card-1" class="blog-card">
+                            <h3 class="blog-heading">Do Duplicate Links Help or Hurt?</h3>
+                            <p class="blog-paragraph">In her article for Nielsen Norman Group, Hoa Loranger addresses whether duplicate links help or hurt a websites’ users. She discusses several reasons why designers use duplicate links. Duplicate links provide safety nets for users, create visual balance, and keep users from needing to scroll on long pages...</p>
+                            <a class="read-more" href="https://jenninnc.wordpress.com/2022/02/14/do-duplicate-links-help-or-hurt/" target="_blank">Read More
+                            </a>
+                        </div>
+                        <div id="blog-card-2" class="blog-card">
+                            <h3 class="blog-heading">Visual Hierarchy & the Squint Test</h3>
+                            <p class="blog-paragraph">This article, “Visual Hierarchy in UX/UI Design” by UI Blogger discusses how visual hierarchy is used in user interface design to direct a viewer’s attention. Visual hierarchy is created using 1) color and contrast, (2) scale, and (3) grouping.The article also discusses an interesting method of assessing the hierarchy of...</p>
+                            <a class="read-more" href="https://jenninnc.wordpress.com/2022/01/20/visual-hierarchy-and-the-squint-test/" target="_blank">Read More
+                            </a>
+                        </div>
+                        <div id="blog-card-3" class="blog-card">
+                            <h3 class="blog-heading">Slideshows and Carousels: Are They Good Web Design?</h3>
+                            <p class="blog-paragraph">Slideshows, also called carousels or slides, have been a popular trend in web design for quite a while. The ability to showcase multiple large images within a single space seems like the perfect answer to limited space on web pages. However, research...</p>
+                            <a class="read-more" href="https://jenninnc.wordpress.com/2022/01/13/slideshows-and-carousels-are-they-good-web-design/" target="_blank">Read More
+                            </a>
+                        </div>
+                    </div><!-- END blog cards CSS grid container -->
+                </section><!-- END Blog Section -->
+
+            </div><!-- end "main-wrapper-container"class --> <!-- ^ end main-wrapper -->
+        </main><!-- END MAIN -->
+
+        <footer><!-- * FOOTER -->
+            <div class="footer-container">
+                <ul class="no-bullet footer-contact-icons">
+                    <li>
+                        <a class="contact-link" href="mailto:jdgregory@my.waketech.edu" target="_blank">
+                            <img class="about-contact-icons" src="images/envelope.png" alt="email icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact-link" href="https://twitter.com/jennife41447182" target="_blank">
+                            <img class="about-contact-icons" src="images/linkedin.svg" alt="linkedin logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact-link" href="https://twitter.com/jennife41447182" target="_blank">
+                            <img class="about-contact-icons" src="images/twitter.svg" alt="twitter logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact-link" href="https://github.com/jdgregory" target="_blank">
+                            <img class="about-contact-icons" src="images/github.svg" alt="github logo">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer><!-- END FOOTER -->
+    </body> 
+</html>

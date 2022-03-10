@@ -1,0 +1,410 @@
+
+/*  Main CSS */
+/*  Directory:
+    Global Styles
+    Utility Classes
+    Font & Color Styles
+*/
+
+/* ===============
+   GLOBAL STYLES 
+   =============== */
+/* Clears browsers' default margin and padding values */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Sets default font size to 16px */
+html {
+    font-size: 16px;
+    height: 100%;
+}
+body {
+ height: 100%;
+}
+.section-spacing {                          /* adds space to the top and bottom of section containers (except about section) */ 
+    margin: 5rem 0;
+}
+/* ===============
+   UTILITY CLASSES 
+   =============== */
+.flex {
+    display: flex;
+}
+.no-bullet {
+    list-style-type: none;
+}
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+.block {
+    display: block;
+}
+.main-wrapper-container {
+    width: 80%;
+    margin: auto;
+}
+/* ===============
+   FONT & COLOR STYLES
+   =============== */
+/* Colors */
+body {
+    background-color: #1d1d20;
+    color: #F1E9E9;
+}
+/* Fonts */
+h1, h2, h3, h4 {
+    font-family: 'Belleza', sans-serif;
+}
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.125rem;
+}
+h2 {
+    font-size: 2rem;
+    letter-spacing: 0.063rem;
+    margin: 0 0 3rem 3.25rem;                               /* sets margin for bottom and left h2 margins */
+}
+h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.031rem;
+}
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.25rem;
+}
+/* ===============
+   About Section
+   =============== */
+#about {
+    margin: 3rem 0;
+    background-color: #0f0f10;
+    display: flex;
+}
+#about-h1 {
+    margin-left: 1rem;
+}
+#about-p {
+    margin: 1rem 1rem 0 1rem;
+    line-height: 1.75rem;
+}
+.about-left-column {
+    margin: 2rem 1rem 1rem 2rem;
+}
+.about-right-column {
+    margin: 2rem 5rem 1rem 1rem;
+}
+.about-icons {
+    display: flex;
+    margin-top: 6rem;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+.about-contact-icons {
+    margin: 0 .50rem;
+}
+/* ===============
+   Projects Section
+   =============== */
+.project-main-grid-container {                      /* grid container for 4 project cards */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1.563rem;
+    grid-row-gap: 0.625rem;
+    grid-auto-flow: row;
+    align-items: center;
+    border-radius: 1.563rem; 
+}
+.project-card-grid {                               /* grid container for each project card - contains image, text container, and (for some) the .view-link-container */ 
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    background-color: #ffffff;
+    justify-items: center;
+    border-radius: 1.563rem;
+    padding: 2rem 1rem;
+}
+.project-image {
+    background-color: #ffffff;
+}
+.project-text-container {   
+    color: #0f0f10; 
+}
+.project-text-heading {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0 0 1rem 1rem;
+}
+.project-text {
+    margin: 0 2rem 0 1rem;
+    font-size: 1.125rem;
+}
+#proj-item-1 {                                    /* adds border color to project cards */
+    border: solid 0.313rem #b43e8f;
+}
+#proj-item-2 {
+    border: solid 0.313rem #6200b3;
+}
+#proj-item-3 {
+    border: solid 0.313rem #3626a7;  
+}
+#proj-item-4 {
+    border: solid 0.313rem #ae0fbd;
+}
+.view-link-container{                           /* container for open icon and link for (some) project cards */
+    display: flex;
+    align-content: center;
+    margin: 1.50rem 0 0 .75rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.25rem;
+}
+.project-open-icon {
+    margin-right: 0.188rem;
+}
+/* "View Full Website" Link States */
+a.open-link:link {       
+    border-bottom: 3px solid #3626a7;
+    text-decoration: none;                   
+    color: #3626a7;
+}
+a.open-link:visited {     
+    color: #3626a7;
+}
+a.open-link:focus {
+    border-bottom: 3px solid black;
+}
+a.open-link:hover { 
+    border-bottom: none;
+}
+
+#proj-item-4 p {
+    font-size: 1rem;                          /* resizes project 4's text so it fits better within the grid */                 
+}
+#proj-item-4 h3 {                             /* resizes project 4's text so it fits better within the grid */  
+    font-size: 1.375rem;
+}
+
+/* ===============
+   Contact Section
+   =============== */
+.contact-flex-container {
+    display: flex;                             /* flexbox container for contact section - allows left and right columns to sit beside one another */ 
+}
+.contact-left-column {
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 1.25rem; 
+    background-size: cover;
+    background-image: url("../images/background.png");
+    margin: 0 0 0 2rem;
+    padding: 5rem 2rem;
+    flex-grow: 3;                               /* contact-left-column is child of contact-flex-container and its content will take up 2 of empty space */
+    display: flex;                              /* creates flex container for contact icons and links */
+    justify-content: center;
+    align-items: center;
+}
+.contact-right-column{
+    font-size: 1.25rem; 
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #f1e9e9;
+    color: #0f0f10; 
+    flex-grow: 2;                               /* second child of contact-flex-container, will take up 3 of empty space*/
+    text-align: center;
+    padding: 1rem 0;
+}
+.contact-input {
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 1.125rem;
+    width: 15.625rem;
+    height: 1.5rem;
+    border-radius: 0.188rem;
+    border-color: #dfcdcd;
+    border-style:solid;    
+}
+form {
+    margin: 1rem 7rem; 
+    padding: 2rem;
+}
+.contact-rheading {                               /* adds margin to contact right heading  */  
+    margin-top: 3rem;   
+}
+.form-list-container {                            /* class applied to form ul element - creates flex container - li elements become flex children (controls how form elements are spaced horizontally)  */  
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+.form-list-items {                                 /* class applied to li elements - creates flex container - label and input elements become flex children (controls how form elements are spaced vertically) */ 
+    display: flex;
+    justify-content: space-between;
+    padding: 0.188rem;
+}
+textarea {
+    margin-top: 0.5rem;
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 1.125rem;
+    border-radius: 0.188rem;
+    border-color: #dfcdcd;
+    border-style: solid;
+    width: 29.375rem;    
+}
+label.block {                                        /* adds margin to top of textarea label */
+    margin-top: 1rem;                               
+}
+.contact-button {                                   /* button for contact form */
+    margin-top: 1rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    padding: 0.5rem 0.875rem;
+    background-color: #3626a7;
+    color: #ffffff;
+    border: none;
+}
+/* "Contact-Link" Class Link States */
+a.contact-link:link {       
+    text-decoration: none;                   
+    color: #F1E9E9;
+}
+a.contact-link:visited {     
+    color: #F1E9E9;
+}
+a.contact-link:hover { 
+    color: #0f0f10;
+}
+/* ===============
+   Resume
+   =============== */
+#work-experience-h3{
+    margin-left: 3.25rem;
+}
+.job1 {
+    display: flex;
+    margin: 1rem;
+}
+.job1-title {
+    flex-grow: 1;
+    padding: 1rem 2rem;
+}
+.job1-title li {
+    margin-top: 0.25rem;
+}
+.job1-description {
+    flex-grow: 1;
+    padding: 1rem 2rem;
+}
+.job2 {
+    display: flex;
+    margin: 1rem;
+}
+.job2-title {
+    flex-grow: 1;
+    padding: 1rem 2rem;
+}
+.job2-title li {
+    margin-top: 0.25rem;
+}
+.job2-description {
+    flex-grow: 1;
+    padding: 1rem 2rem;
+}
+.resume-li {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+}
+.indent {
+    margin-left: 1.875rem;
+}
+
+.skills-education-container {                   /* holds #skills and #education */
+    display: flex;
+    align-content: center;
+    justify-content: center;   
+}
+#skills {
+    flex-grow: 1;
+    display: flex;
+    padding: 5rem;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;  
+}
+#education {
+    flex-grow: 1;
+    display: flex;
+    padding: 5rem;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;  
+}
+
+/* ===============
+   Blog Section
+   =============== */
+#blog {
+    padding-bottom: 5rem;
+}
+.blog-card-container {                                       /* CSS Grid container for blog cards */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0.625rem 1.875rem;
+    grid-auto-flow: row;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.blog-card {
+    padding: 2rem 2.5rem;
+}
+.blog-heading {                                                /* font size, margin bottom for blog headings */ 
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+.blog-paragraph {                                              /* font size, margin bottom for blog paragraphs */ 
+    font-size: 1rem;
+    margin-bottom: 1rem;                                        
+}
+
+#blog-card-1 {                                                /* border colors for blog cards */  
+    border: solid 0.313rem #b43e8f;
+}
+#blog-card-2 {
+    border: solid 0.313rem #6200b3;
+}
+#blog-card-3 {
+    border: solid 0.313rem #3626a7;  
+}
+/* Read More Link States */
+a.read-more:link {       
+    text-decoration: none;                   
+    color: #F1E9E9;
+    border-bottom: 3px solid #F1E9E9;
+}
+a.read-more:visited {     
+    color: #F1E9E9;
+}
+a.read-more:hover { 
+    color: #F1E9E9;
+    border-bottom: none;
+}
+
+
+/* ===============
+   Footer Section
+   =============== */
+   footer {
+       background-color: #6200b3;
+       padding: 4rem;
+   }
+   .footer-contact-icons {
+       display: flex;
+       flex-direction: row;
+   }
+   .footer-container {
+       display: flex;
+   }
+  

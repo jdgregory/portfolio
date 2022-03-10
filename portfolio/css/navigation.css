@@ -1,0 +1,144 @@
+/* CSS for Navigation */
+/*  Directory:
+    Global Styles
+    Utility Classes
+    Primary Layout
+    Navigation
+    Font & Color Styles
+    Media Queries */
+
+/* ===============
+   GLOBAL STYLES 
+   =============== */
+/* Class allows elements to be hidden visually but present for assistive tech */
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+/* ===============
+   UTILITY CLASSES 
+   =============== */
+.nav-wrapper-container {
+    width: 80%;
+    margin: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* ===============
+   PRIMARY LAYOUT
+   =============== */
+body {
+    overflow-x: hidden;
+}
+
+/* ===============
+   NAVIGATION
+   =============== */
+.mobile-nav-toggle {
+    display: none;
+}
+.primary-navigation {
+    display: flex;
+    gap: 3rem;
+}
+.primary-navigation-a {
+    padding: 0.2rem 0.4rem;
+}
+
+/* id for site logo */
+#nav-logo {
+    margin: 1rem 1rem 1rem 0rem;
+}
+/* ===============
+   FONT & COLOR STYLES
+   =============== */
+/* Colors */
+header {
+    background-color: #0F0F10;
+}
+nav {
+    background-color: #0F0F10;
+}
+
+/* Navigation Font */
+.primary-navigation {
+    font-size: 1.25rem;             /* font-size - navigation font size */           
+    font-family: 'Alegreya Sans', sans-serif; /* font-family - navigation font family */
+    font-weight: 500;               /* font-weight - navigation font weight */
+}
+/* Navigation Link States */
+a.primary-navigation-a:link {        /* unvisited link has white text */
+    color: #F1E9E9;
+    text-decoration: none;
+}
+a.primary-navigation-a:visited {     /* unvisited link has white text */
+    color: #F1E9E9;
+}
+a.primary-navigation-a:focus {
+    border-bottom: 3px solid white;
+}
+a.primary-navigation-a:hover { 
+    border-bottom: 3px solid #b43e8f;
+}
+a.primary-navigation-a:active {
+    color: #b43e8f;
+}
+
+/* ===============
+   MEDIA QUERIES
+   =============== */
+
+@media only screen and (max-width: 1020px) and (min-width: 769px)  {
+
+    .primary-navigation {
+        gap: 2rem;
+    }
+}
+/* For screen sizes 768 px and below */
+@media (max-width: 768px) {
+    header {
+        background-color: #0F0F10;
+    }
+    nav {
+        width: 100%; 
+    }
+    .primary-navigation {
+        margin-right: 0rem;
+        position: fixed;
+        inset: 0 0 0 30%;
+        z-index: 1000;                            /*  z-index sets stacking order */              
+        flex-direction: column;
+        gap: 2rem;
+        padding: 10rem 4rem;
+        background: hsla(240, 5%, 8%, .95);     /* hue, saturation, lightness, alpha (color transparency) - note: alpha can be a number 0 to 1. 0 is fully transparent. 1 is fully opaque. 0.5 is 50% transparent  */ 
+        color: #F1E9E9;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        z-index: 9999;              /*  z-index sets stacking order */
+        width: 2rem;
+        aspect-ratio: 1/1;            /*  aspect-ratio of 1 keeps height and width the same */
+        background-color: transparent;     
+        background-image: url("../images/icon-hamburger.svg");
+        background-repeat: no-repeat;
+        border: 0;
+    }
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url("../images/icon-close.svg");
+    }
+}
